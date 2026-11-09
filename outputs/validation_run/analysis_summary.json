@@ -1,0 +1,99 @@
+{
+  "n_validation": 837,
+  "n_correct": 785,
+  "accuracy": 0.9379,
+  "accuracy_ci95": [
+    0.9194,
+    0.9523
+  ],
+  "mean_confidence": 0.9196,
+  "mean_confidence_correct": 0.9332,
+  "mean_confidence_incorrect": 0.7137,
+  "n_errors": 52,
+  "n_confident_errors_gt_0_9": 10,
+  "per_class": {
+    "Blight": {
+      "support": 253,
+      "correct": 241,
+      "recall": 0.9525691699604744,
+      "recall_ci95": [
+        0.9189,
+        0.9727
+      ],
+      "mean_confidence": 0.8891
+    },
+    "Common_Rust": {
+      "support": 265,
+      "correct": 254,
+      "recall": 0.9584905660377359,
+      "recall_ci95": [
+        0.9272,
+        0.9767
+      ],
+      "mean_confidence": 0.9416
+    },
+    "Gray_Leaf_Spot": {
+      "support": 85,
+      "correct": 56,
+      "recall": 0.6588235294117647,
+      "recall_ci95": [
+        0.5531,
+        0.7508
+      ],
+      "mean_confidence": 0.7703
+    },
+    "Healthy": {
+      "support": 234,
+      "correct": 234,
+      "recall": 1.0,
+      "recall_ci95": [
+        0.9838,
+        1.0
+      ],
+      "mean_confidence": 0.982
+    }
+  },
+  "error_pairs": {
+    "Blight -> Common_Rust": 5,
+    "Blight -> Gray_Leaf_Spot": 7,
+    "Common_Rust -> Blight": 10,
+    "Common_Rust -> Gray_Leaf_Spot": 1,
+    "Gray_Leaf_Spot -> Blight": 28,
+    "Gray_Leaf_Spot -> Common_Rust": 1
+  },
+  "triage": {
+    "0.5": {
+      "reviewed_percent": 1.31,
+      "errors_caught_percent": 9.62,
+      "accuracy_if_accepted": 94.31
+    },
+    "0.6": {
+      "reviewed_percent": 5.38,
+      "errors_caught_percent": 32.69,
+      "accuracy_if_accepted": 95.58
+    },
+    "0.7": {
+      "reviewed_percent": 10.04,
+      "errors_caught_percent": 48.08,
+      "accuracy_if_accepted": 96.41
+    },
+    "0.8": {
+      "reviewed_percent": 14.93,
+      "errors_caught_percent": 63.46,
+      "accuracy_if_accepted": 97.33
+    },
+    "0.9": {
+      "reviewed_percent": 24.61,
+      "errors_caught_percent": 80.77,
+      "accuracy_if_accepted": 98.42
+    }
+  },
+  "dominant_error_share": 0.5385,
+  "reported_metrics": {
+    "accuracy_percent": 93.78733572281959,
+    "macro_precision": 0.9289305900192997,
+    "macro_recall": 0.8924708163524937,
+    "macro_f1": 0.9063279843905065,
+    "selected_stage": "stage1"
+  }
+}

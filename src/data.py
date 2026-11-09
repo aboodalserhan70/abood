@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-from .config import CLASS_NAMES
+from .config import CLASS_ALIASES, CLASS_NAMES
 
 IMG_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
 
@@ -28,9 +28,9 @@ def scan_dataset(data_dir: Path | str) -> pd.DataFrame:
 
     rows: list[dict] = []
     for class_dir in sorted(p for p in data_dir.iterdir() if p.is_dir()):
-        label = class_dir.name
-        if label not in CLASS_NAMES:
-            print(f"[تحذير] تم تجاهل مجلد غير معروف: {label}")
+        label = CLASS_ALIASES.get(class_dir.name)
+        if label is None:
+            print(f"[تحذير] تم تجاهل مجلد غير معروف: {class_dir.name}")
             continue
         for img_path in sorted(class_dir.rglob("*")):
             if img_path.suffix.lower() in IMG_EXTENSIONS and img_path.is_file():

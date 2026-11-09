@@ -1,0 +1,5 @@
+class_name,total,train,validation
+Blight,1144,891,253
+Common_Rust,1306,1041,265
+Gray_Leaf_Spot,572,487,85
+Healthy,1162,928,234

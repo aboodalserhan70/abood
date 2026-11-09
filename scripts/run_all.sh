@@ -6,23 +6,18 @@ set -euo pipefail
 BACKBONE="${1:-mobilenetv2}"
 cd "$(dirname "$0")/.."
 
-echo "==> 1/6  التحليل الاستكشافي (EDA)"
-python -m src.eda
+echo "==> 1/4  تحليل مخرجات التشغيل الحقيقية (منحنيات + مقاييس + ثقة)"
+python scripts/analyze_results.py
 
-echo "==> 2/6  أشكال المنهجية والبنية"
+echo "==> 2/4  مخطط خط الأنابيب"
 python -m src.diagram
 
-echo "==> 3/6  خط الأساس الكلاسيكي (SVM)"
-python -m src.baseline
+echo "==> 3/4  (اختياري) تدريب جديد على مجموعة البيانات الكاملة"
+# python -m src.train --epochs 40 --backbone "${BACKBONE}" --img-size 224
+# python -m src.evaluate --img-size 224
 
-echo "==> 4/6  تدريب النموذج (${BACKBONE})"
-python -m src.train --epochs 40 --backbone "${BACKBONE}" --img-size 224
-
-echo "==> 5/6  التقييم + Grad-CAM"
-python -m src.evaluate --img-size 224
-
-echo "==> 6/6  بناء نسخة HTML من التقرير"
+echo "==> 4/4  بناء نسخة HTML من التقرير"
 python scripts/build_report.py
 
 echo
-echo "تم. المخرجات في: figures/ · outputs/ · report/"
+echo "تم. المخرجات في: figures/ · outputs/validation_run/ · report/"

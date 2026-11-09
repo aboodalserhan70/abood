@@ -1,0 +1,5 @@
+path,label,class_name,sha256
+/kaggle/input/corn-or-maize-leaf-disease-dataset/data/Blight/Corn_Blight (1104).jpg,0,Blight,ee3838e2249e671b7b4510b0d3831f30882e2bcbf20c9c8c42ee8f4e1b95fcce
+/kaggle/input/corn-or-maize-leaf-disease-dataset/data/Blight/Corn_Blight (77).jpg,0,Blight,9120578a76fd8539da220def6e0609ebb2435decc7a9c34b949e46e86e794c8d
+/kaggle/input/corn-or-maize-leaf-disease-dataset/data/Gray_Leaf_Spot/Corn_Gray_Spot (19).jpg,2,Gray_Leaf_Spot,9120578a76fd8539da220def6e0609ebb2435decc7a9c34b949e46e86e794c8d
+/kaggle/input/corn-or-maize-leaf-disease-dataset/data/Gray_Leaf_Spot/Corn_Gray_Spot (564).jpg,2,Gray_Leaf_Spot,ee3838e2249e671b7b4510b0d3831f30882e2bcbf20c9c8c42ee8f4e1b95fcce

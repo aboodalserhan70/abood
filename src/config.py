@@ -50,6 +50,19 @@ CLASS_INFO: dict[str, dict[str, str]] = {
 
 CLASS_NAMES: list[str] = list(CLASS_INFO.keys())
 
+# أسماء بديلة للمجلدات: تسمح باستخدام أسماء المجلدات الأصلية للمجموعة
+# (Blight / Common_Rust / Gray_Leaf_Spot / Healthy) أو الأسماء المسبوقة بـ Corn_
+CLASS_ALIASES: dict[str, str] = {
+    "Corn_Blight": "Corn_Blight",
+    "Blight": "Corn_Blight",
+    "Corn_Common_Rust": "Corn_Common_Rust",
+    "Common_Rust": "Corn_Common_Rust",
+    "Corn_Gray_Spot": "Corn_Gray_Spot",
+    "Gray_Leaf_Spot": "Corn_Gray_Spot",
+    "Corn_Health": "Corn_Health",
+    "Healthy": "Corn_Health",
+}
+
 
 # ---------------------------------------------------------------------------
 # معاملات النموذج والتدريب | Model / training hyper-parameters
