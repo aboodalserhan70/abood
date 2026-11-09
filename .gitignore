@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# مخرجات التدريب الكبيرة (تُعاد توليدها بالأوامر)
+outputs/models/*.keras
+outputs/logs/*.csv
+
+# نظام التشغيل والمحرّرات
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
